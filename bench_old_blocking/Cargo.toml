@@ -1,0 +1,8 @@
+[package]
+name = "bench_old_blocking"
+version = "0.1.0"
+authors = ["Mario Ortiz Manero <marioortizmanero@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+rspotify = { version = "0.10.0", features = ["blocking"] }

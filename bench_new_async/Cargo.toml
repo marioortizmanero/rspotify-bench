@@ -1,0 +1,8 @@
+[package]
+name = "bench_new_async"
+version = "0.1.0"
+authors = ["Mario Ortiz Manero <marioortizmanero@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+rspotify = { git = "https://github.com/ramsayleung/rspotify" }
