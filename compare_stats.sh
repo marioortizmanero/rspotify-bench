@@ -1,6 +1,4 @@
 #!/bin/sh
-# Benchmarks from the maintainer's perspective.
-#
 # 0.10 release - 33d8f770b3d0bcaaccd0c83c0ab0481edb7e5eaa
 # 0.11 release - master
 
