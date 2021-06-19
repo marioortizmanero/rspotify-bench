@@ -5,4 +5,5 @@ authors = ["Mario Ortiz Manero <marioortizmanero@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-rspotify = { git = "https://github.com/ramsayleung/rspotify" }
+rspotify = { git = "https://github.com/ramsayleung/rspotify", features = ["env-file"], branch = "auth-rewrite-part3" }
+tokio = { version = "1.0", features = ["full"] }

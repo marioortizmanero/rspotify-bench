@@ -5,4 +5,4 @@ authors = ["Mario Ortiz Manero <marioortizmanero@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-rspotify = { git = "https://github.com/ramsayleung/rspotify", default_features = false, features = ["client-ureq", "ureq-rustls-tls"] }
+rspotify = { git = "https://github.com/ramsayleung/rspotify", default_features = false, features = ["client-ureq", "ureq-rustls-tls", "env-file"], branch = "auth-rewrite-part3" }

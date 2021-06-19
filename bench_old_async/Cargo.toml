@@ -6,3 +6,4 @@ edition = "2018"
 
 [dependencies]
 rspotify = "0.10.0"
+tokio = { version = "0.2.25", features = ["full"] }
