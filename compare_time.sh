@@ -17,6 +17,7 @@ for bench in $BENCHMARKS; do
     cd "$bench"
 
     cargo clean
+    rm .spotify_token_cache.json
     cargo fetch -q
     echo ">> Compilation in debug (may take some time):"
     time cargo build -q
