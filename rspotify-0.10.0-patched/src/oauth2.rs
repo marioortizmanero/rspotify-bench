@@ -44,7 +44,7 @@ pub struct TokenInfo {
     pub expires_in: u32,
     pub expires_at: Option<i64>,
     pub refresh_token: Option<String>,
-    pub scope: String,
+    pub scope: Option<String>,
 }
 impl TokenInfo {
     pub fn default() -> TokenInfo {
@@ -54,7 +54,7 @@ impl TokenInfo {
             expires_in: 0u32,
             expires_at: None,
             refresh_token: None,
-            scope: String::new(),
+            scope: None,
         }
     }
     pub fn access_token(mut self, access_token: &str) -> TokenInfo {
@@ -70,7 +70,7 @@ impl TokenInfo {
         self
     }
     pub fn scope(mut self, scope: &str) -> TokenInfo {
-        self.scope = scope.to_owned();
+        self.scope = Some(scope.to_owned());
         self
     }
     pub fn expires_at(mut self, expires_at: i64) -> TokenInfo {
@@ -288,7 +288,7 @@ impl SpotifyOAuth {
                     .unwrap_or_else(|_| {
                         panic!("convert [{:?}] to json failed", self.cache_path.display())
                     });
-                if !SpotifyOAuth::is_scope_subset(&mut self.scope, &mut token_info.scope) {
+                if token_info.scope.is_some() && !SpotifyOAuth::is_scope_subset(&mut self.scope, &mut token_info.scope.clone().unwrap()) {
                     None
                 } else if self.is_token_expired(&token_info) {
                     if let Some(refresh_token) = token_info.refresh_token {

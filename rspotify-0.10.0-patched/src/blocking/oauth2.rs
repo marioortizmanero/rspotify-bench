@@ -465,7 +465,6 @@ fn fetch_access_token(
         .expect("failed to read response");
     if response.status().is_success() {
         debug!("response content: {:?}", buf);
-        println!("payload: {:#?}", payload);
         let mut token_info: TokenInfo = serde_json::from_str(&buf).unwrap();
         // .expect("parsing response content to tokenInfo error");
         let expires_in = token_info.expires_in;
