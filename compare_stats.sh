@@ -1,10 +1,15 @@
-#!/bin/sh
+#!/usr/bin/env bash
+# Compare statistics such as line count or dependencies of different releases.
+#
 # 0.10 release - 33d8f770b3d0bcaaccd0c83c0ab0481edb7e5eaa
 # 0.11 release - master
+#
+# Example usage:
+#   ./compare_stats.sh 33d8f770b3d0bcaaccd0c83c0ab0481edb7e5eaa master
 
 set -e
 
-if [ $# -ne 2 ]; then
+if [ $# -lt 1 ]; then
     echo "Usage: $0 [BRANCHES..]"
     exit 1
 fi

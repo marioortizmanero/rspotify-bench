@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env bash
+# Compare performance of different releases.
 
 set -e
 
@@ -16,7 +17,7 @@ for bench in $BENCHMARKS; do
     cd "$bench"
 
     cargo clean
-    cargo fetch
+    cargo fetch -q
     echo ">> Compilation in debug (may take some time):"
     time cargo build -q
     echo ">> Execution in debug:"
@@ -26,5 +27,5 @@ for bench in $BENCHMARKS; do
     echo ">> Execution in release:"
     time ./target/release/$bench
 
-    cd ..
+    cd -
 done
