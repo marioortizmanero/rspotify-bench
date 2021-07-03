@@ -31,4 +31,4 @@ see actually noticeable changes.
 
 ## Conclusion
 
-TODO
+Read more details at https://nullderef.com/blog/rspotify-upgrade.
