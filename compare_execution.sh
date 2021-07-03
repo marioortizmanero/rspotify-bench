@@ -4,10 +4,10 @@
 set -e
 
 BENCHMARKS=(
-    ./bench_new_async
-    ./bench_new_blocking
-    ./bench_old_async
-    ./bench_old_blocking
+    bench_new_async
+    bench_new_blocking
+    bench_old_async
+    bench_old_blocking
 )
 
 unset CARGO_TARGET_DIR
@@ -27,6 +27,12 @@ for bench in "${BENCHMARKS[@]}"; do
     time cargo build --release -q
     echo ">> Execution in release:"
     time ./target/release/$bench
+    echo ">> Release binary size"
+    du -h "target/release/$bench"
+    echo ">> Release binary size (stripped)"
+    cp "target/release/$bench" "target/release/$bench-stripped"
+    strip "target/release/$bench-stripped"
+    du -h "target/release/$bench-stripped"
 
     cd -
 done

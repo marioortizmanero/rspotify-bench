@@ -1,6 +1,7 @@
 # Rspotify Benchmarks
 
-This repository includes a few tools to benchmark and compare Rspotify releases.
+This repository includes a few simple tools to benchmark and compare
+[Rspotify](https://github.com/ramsayleung/rspotify) releases.
 
 ## Statistics
 
@@ -21,12 +22,12 @@ see actually noticeable changes.
 
 *Results example as of 2021-07-04:*
 
-|         Version         | Debug Compilation Time (s) | Debug Execution Time (s) | Release Compilation Time (s) | Release Execution Time (s) |
-|:-----------------------:|:--------------------------:|:------------------------:|:----------------------------:|:--------------------------:|
-| 0.10.0, blocking        |           69.775           |           0.202          |            114.098           |            0.200           |
-| 0.10.0, async           |           70.479           |           0.206          |            107.744           |            0.229           |
-| master, blocking (ureq) |           37.780           |           0.187          |            50.274            |            0.194           |
-| master, async (reqwest) |           49.602           |           0.212          |            81.498            |            0.205           |
+|         Version         | Debug Compilation Time (s) | Debug Execution Time (s) | Release Compilation Time (s) | Release Execution Time (s) | Release Binary Size (MB) | Release Stripped Binary Size (MB) |
+|:-----------------------:|:--------------------------:|:------------------------:|:----------------------------:|:--------------------------:|:------------------------:|:---------------------------------:|
+| 0.10.0, blocking        |           69.775           |           0.202          |            114.098           |            0.200           |            9.8           |                5.0                |
+| 0.10.0, async           |           70.479           |           0.206          |            107.744           |            0.229           |            10            |                5.2                |
+| master, blocking (ureq) |           37.780           |           0.187          |            50.274            |            0.194           |            7.2           |                2.7                |
+| master, async (reqwest) |           49.602           |           0.212          |            81.498            |            0.205           |            8.1           |                3.8                |
 
 ## Conclusion
 
