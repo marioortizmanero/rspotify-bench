@@ -5,5 +5,7 @@ authors = ["Mario Ortiz Manero <marioortizmanero@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-rspotify = "0.10.0"
+# A patched version of Rspotify 0.10.0 is used so that the program can run with
+# the current API.
+rspotify = { version = "0.10.0", path = "../rspotify-0.10.0-patched" }
 tokio = { version = "0.2.25", features = ["full"] }
