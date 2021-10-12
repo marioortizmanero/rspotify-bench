@@ -13,7 +13,7 @@ that will need to be maintained, or its number of dependencies.
 | Version | Rust LoC | Dependencies in tree | Dependencies in tree (all features) |
 |:-------:|:--------:|----------------------|-------------------------------------|
 | 0.10.0  |   11281  | 132                  | 141                                 |
-| master  |   7133   | 101                  | 121                                 |
+| master  |   7525   | 101                  | 123                                 |
 
 ## Execution
 
@@ -24,11 +24,11 @@ see actually noticeable changes.
 
 |         Version         | Debug Compilation Time (s) | Debug Execution Time (s) | Release Compilation Time (s) | Release Execution Time (s) | Release Binary Size (MB) | Release Stripped Binary Size (MB) |
 |:-----------------------:|:--------------------------:|:------------------------:|:----------------------------:|:--------------------------:|:------------------------:|:---------------------------------:|
-| 0.10.0, blocking        |           69.775           |           0.202          |            114.098           |            0.200           |            9.8           |                5.0                |
-| 0.10.0, async           |           70.479           |           0.206          |            107.744           |            0.229           |            10            |                5.2                |
-| master, blocking (ureq) |           37.780           |           0.187          |            50.274            |            0.194           |            7.2           |                2.7                |
-| master, async (reqwest) |           49.602           |           0.212          |            81.498            |            0.205           |            8.1           |                3.8                |
+| 0.10.0, blocking        |           72.712           |           0.485          |            126.229           |            0.673           |            9.9           |                4.9                |
+| 0.10.0, async           |           72.244           |           0.410          |            115.703           |            0.400           |            11            |                5.2                |
+| master, blocking (ureq) |           38.549           |           0.399          |            55.934            |            0.386           |            7.3           |                2.6                |
+| master, async (reqwest) |           51.014           |           0.432          |            86.594            |            0.412           |            8.5           |                4.0                |
 
 ## Conclusion
 
-Read more details at https://nullderef.com/blog/rspotify-upgrade.
+Read more details at https://nullderef.com/blog/web-api-client.
