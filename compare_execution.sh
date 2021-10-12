@@ -21,12 +21,10 @@ for bench in "${BENCHMARKS[@]}"; do
     cargo fetch -q
     echo ">> Compilation in debug (may take some time):"
     time cargo build -q
-    echo ">> Execution in debug:"
-    time ./target/debug/$bench
     echo ">> Compilation in release (may take some time):"
     time cargo build --release -q
-    echo ">> Execution in release:"
-    time ./target/release/$bench
+    echo ">> Benchmarking (may take some time):"
+    cargo +nightly bench -q
     echo ">> Release binary size"
     du -h "target/release/$bench"
     echo ">> Release binary size (stripped)"
