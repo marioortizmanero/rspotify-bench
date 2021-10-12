@@ -6,3 +6,10 @@ edition = "2018"
 
 [dependencies]
 rspotify = { git = "https://github.com/ramsayleung/rspotify", default_features = false, features = ["client-ureq", "ureq-rustls-tls", "env-file"], branch = "master" }
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "basic"
+harness = false

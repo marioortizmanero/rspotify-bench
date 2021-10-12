@@ -9,3 +9,10 @@ edition = "2018"
 # the current API.
 rspotify = { version = "0.10.0", path = "../rspotify-0.10.0-patched" }
 tokio = { version = "0.2.25", features = ["full"] }
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "basic"
+harness = false

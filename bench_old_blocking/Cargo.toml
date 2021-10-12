@@ -8,3 +8,10 @@ edition = "2018"
 # A patched version of Rspotify 0.10.0 is used so that the program can run with
 # the current API.
 rspotify = { version = "0.10.0", features = ["blocking"], path = "../rspotify-0.10.0-patched" }
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "basic"
+harness = false

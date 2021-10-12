@@ -7,3 +7,10 @@ edition = "2018"
 [dependencies]
 rspotify = { git = "https://github.com/ramsayleung/rspotify", features = ["env-file"], branch = "master" }
 tokio = { version = "1.0", features = ["full"] }
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "basic"
+harness = false
